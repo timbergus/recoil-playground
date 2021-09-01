@@ -50,4 +50,12 @@ const handleChangeName = (event) => {
 
 It would be awesome that this `state` returned by `setState` was already a draft and you could modify its value directly without object destructuring. It would be more readable and safe.
 
+```javascript
+const handleChangeName = (event) => {
+  setFullName((state) => {
+    state.name = event.target.value;
+  });
+};
+```
+
 This would be the same behavior that [`@reduxjs/toolkit`](https://redux-toolkit.js.org/) has.
