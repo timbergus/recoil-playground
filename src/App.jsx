@@ -1,7 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 
+import ImmutableForm from './components/immutable-form/immutable-form';
+import { useRecoilValue } from 'recoil';
+import { fullNameSelector } from './App.selectors';
+
 function App() {
+  const fullName = useRecoilValue(fullNameSelector);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +23,8 @@ function App() {
         >
           Learn React
         </a>
+        <ImmutableForm />
+        <div>{`${fullName.name} ${fullName.surname}`}</div>
       </header>
     </div>
   );

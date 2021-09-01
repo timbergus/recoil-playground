@@ -2,7 +2,7 @@ import { RecoilRoot } from 'recoil';
 import { fireEvent, render, screen } from '@testing-library/react';
 
 import Form, { nameAtom } from './form';
-import { RecoilObserver } from './RecoilObserver';
+import { RecoilObserver } from '../utils/RecoilObserver';
 
 describe('The form state should', () => {
   test('change when the user enters a name.', () => {
